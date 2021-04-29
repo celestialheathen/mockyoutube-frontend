@@ -11,7 +11,8 @@ const Favorites = ({user}) => {
         .then(r => r.json())
         .then(myUser => {
             setFavs(myUser.favorited)
-        })   
+        })  
+        .catch(error => console.log(error)) 
     }, [user])
     
     const displayVids = () => {
